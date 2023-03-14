@@ -1,8 +1,9 @@
 import requests
 import json
 
-def get_github_repositories(query):
-    response = requests.get("https://api.github.com/search/repositories?q=" + query)
+
+def get_github_repositories(query, per_page, page):
+    response = requests.get("https://api.github.com/search/repositories?q=" + query + "&per_page=" + str(per_page) + "&page=" + str(page))
     return response.content
 
 

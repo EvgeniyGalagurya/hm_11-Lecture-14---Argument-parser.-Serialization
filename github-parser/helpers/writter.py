@@ -2,7 +2,7 @@ import csv
 
 
 def write(data):
-    with open('repositories.csv', "a") as f:
+    with open('repositories.csv', "w",  newline='') as f:
         writer = csv.writer(f)
         for el in data:
             row = list(el.values())
